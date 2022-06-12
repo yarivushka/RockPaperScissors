@@ -1,29 +1,41 @@
-//Function ro randomly return computers' cohice beteen rock/paper/scissors.
-function computerPlay() {
+const scissors = document.querySelector('.scissors');
+scissors.addEventListener('click', () => {
+    console.log(computerPlay());
+});
+const paper = document.querySelector('.paper');
+paper.addEventListener('click', () => {
+    console.log(computerPlay());
+});
+const rock = document.querySelector('.rock');
+rock.addEventListener('click', () => {
+    console.log(computerPlay());
+});
+
+function computerPlay() {//Function to randomly return computers' cohice beteen rock/paper/scissors.
+
     let random = Math.random();
-    if (random <= 0.333 && random > 0) {
+    if (random <= 0.333 && random >= 0) {
         return 'ROCK';
     } else if (random > 0.333 && random <= 0.666) {
         return 'PAPER';
-    } else if (random > 0.666) {
+    } else if (random >= 0.666) {
         return 'SCISSORS';
-    }    
-}
+    }
 
-//Main function to generate game.
-function game() {
-    
-    let result;
-    let plyrScore = 0;
+
+
+
+/*let plyrScore = 0;
     let compScore = 0;
-    for(let i = 0; i < 7; i++) {
-    
-    //Individual game-round to evaluate comp's/player's choices and output result.
-    function Round(playerSelection, computerSelection) {
+    const computerSelection = computerPlay();
+    let result;
+
         
-        if (computerSelection === playerSelection){
-        result = 'Tie';
-        } else if (computerSelection === 'ROCK' && playerSelection === 'SCISSORS') {
+
+    
+    function Round(playerSelection) {    //Individual round to evaluate comp's/player's choices and result winner.
+        
+        if (computerSelection === 'ROCK' && playerSelection === 'SCISSORS') {
         compScore += 1;
         result = 'You lose! ROCK beats SCISSORS!';
         } else if (computerSelection === 'SCISSORS' && playerSelection === 'PAPER') {
@@ -41,21 +53,45 @@ function game() {
         } else if (computerSelection === 'ROCK' && playerSelection === 'PAPER') {
         plyrScore += 1;
         result = 'You WIN! PAPER beats ROCK!';
-        }
+        } else if (computerSelection === playerSelection){
+            result = 'Tie';
+            }
         console.log(`You Chose: ${playerSelection}; compChoice is ${computerSelection}`);
         console.log(result);
         console.log(`player score is ${plyrScore}`); console.log(`computer score is ${compScore}`);
+
+
+        function computerPlay() {//Function to randomly return computers' cohice beteen rock/paper/scissors.
+
+            let random = Math.random();
+            if (random <= 0.333 && random >= 0) {
+                return 'ROCK';
+            } else if (random > 0.333 && random <= 0.666) {
+                return 'PAPER';
+            } else if (random >= 0.666) {
+                return 'SCISSORS';
+            }
+        }
+    } 
+    
+    
+    if (plyrScore == 5) {
+        console.log ('END GAME: YOU WIN!!!!!(:');
+    } else if ( compScore == 5) {
+        console.log ('END GAME:YOU LOSE!):');
     }
 
-    const playerSelection = prompt("Please choose: Rock, scissors,paper?").toUpperCase();
-    const computerSelection = computerPlay();
-    Round(playerSelection, computerSelection);
-    } if (plyrScore > compScore) {
-        console.log ('END GAME: YOU WIN!!!!!(:');
-    } else if ( compScore > plyrScore) {
-        console.log ('END GAME:YOU LOSE!):');
-    } else {
-        console.log('END GAME: Tie');
-    }
-}
-game();
+    const rock = document.querySelector('.rock');
+    rock.addEventListener('click', () => {
+        Round('ROCK');
+    })
+    const scissors = document.querySelector('.scissors');
+    scissors.addEventListener('click', () => {
+        Round('SCISSORS');
+    })
+    
+    const paper = document.querySelector('.paper');
+    paper.addEventListener('click', () => {
+        Round('PAPER');
+    })
+*/
