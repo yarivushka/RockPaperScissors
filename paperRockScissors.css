@@ -56,26 +56,28 @@ img{
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: rgb(219, 199, 199);
+    color: rgb(16, 13, 14);
     text-shadow: 9px rgb(159, 240, 118);
     font-weight: bolder;
     font-size: 24px;
-    background-color: rgba(60, 200, 2, 0.6);
+    background-color: rgba(232, 242, 85, 0.6);
     border-radius: 8px;
     height: 3.5rem;
     margin-right: 2px;
     padding: 4px 8px;
-
+    white-space: pre-wrap;
+    transition: all .007s ease;
 }
+
 .score{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(219, 199, 199);
+    color: rgb(16, 13, 14);
     text-shadow: 9px rgb(159, 240, 118);
     font-weight: bolder;
     font-size: 24px;
-    background-color: rgba(60, 200, 2, 0.6);
+    background-color: rgba(232, 242, 85, 0.6);
     border-radius: 8px;
     flex: .5;
     height: 3.5rem;
